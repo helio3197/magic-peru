@@ -3,7 +3,7 @@ import NavbarBrand from 'react-bootstrap/NavbarBrand';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import toLink from '../utils';
+import toLink from '../../utils';
 
 const Footer = () => (
   <Container fluid as="footer" className="p-0 bg-secondary">

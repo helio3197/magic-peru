@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import toLink from '../utils';
+import toLink from '../../utils';
 
 const Header = () => (
   <Navbar as="header" expand="sm" className="border-bottom">
