@@ -1,18 +1,13 @@
-import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-
-const toLink = ({ children, className, href }) => (
-  <Link to={href} className={className}>
-    {children}
-  </Link>
-);
+import toLink from '../utils';
 
 const Header = () => (
   <Navbar as="header" expand="sm" className="border-bottom">
     <Container>
       <Navbar.Brand
+        className="ms-md-5"
         href="/"
         as={toLink}
       >
