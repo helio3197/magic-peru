@@ -9,6 +9,7 @@ const App = () => (
       <Route path="/" element={<Layout />}>
         <Route index element={<Homepage />} />
       </Route>
+      <Route path="*" element={<h1>Nothing Here!</h1>} />
     </Routes>
   </Router>
 );
