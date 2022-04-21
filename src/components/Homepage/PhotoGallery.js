@@ -48,7 +48,7 @@ const PhotoGallery = () => {
   ];
 
   return (
-    <Container as="section" className="headline">
+    <Container as="section" className="headline mb-5">
       <h2>Galerias de Fotos</h2>
       <Row xs="1" md="2" lg="4" className="mt-3 px-sm-3 px-md-0">
         {gallery.map((item) => (

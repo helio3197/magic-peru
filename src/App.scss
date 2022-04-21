@@ -11,7 +11,8 @@
   margin-top: 7rem;
   margin-bottom: 7rem;
 
-  > h1, > p {
+  > h1,
+  > p {
     max-width: 640px;
     text-align: center;
   }
@@ -19,5 +20,12 @@
   @media (max-width: 575px) {
     margin-top: 4rem;
     margin-bottom: 4rem;
+  }
+}
+
+.review-carousel {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: auto;
   }
 }
