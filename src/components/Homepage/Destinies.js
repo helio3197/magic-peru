@@ -32,7 +32,7 @@ const Destinies = () => {
   ];
 
   return (
-    <Container as="section" className="headline">
+    <Container as="section" className="headline mt-5">
       <h2>Destinos Favoritos</h2>
       <Row xs="1" md="2" lg="4" className="mt-3 px-sm-3 px-md-0">
         {destiniesItems.map((item) => (

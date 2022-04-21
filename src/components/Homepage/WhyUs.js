@@ -44,7 +44,7 @@ const WhyUs = () => {
   ];
 
   return (
-    <Container as="section" className="headline">
+    <Container as="section" className="headline mb-5">
       <h2>Por que elegirnos?</h2>
       <p className="text-black-50 my-3">
         We help the world&apos;s leading organizations follow their shipping
