@@ -15,19 +15,19 @@ const Destinies = () => {
       image: placeholderImg,
       title: 'Paracas & Ica',
       description: 'At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.',
-      id: 'pachacamac-adoratory',
+      id: 'paracas-icas',
     },
     {
       image: placeholderImg,
       title: 'Lima City Tour',
       description: 'At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.',
-      id: 'pachacamac-adoratory',
+      id: 'lima-city',
     },
     {
       image: placeholderImg,
       title: 'Cusco & Machupicchu',
       description: 'At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.',
-      id: 'pachacamac-adoratory',
+      id: 'cusco-machupicchu',
     },
   ];
 
