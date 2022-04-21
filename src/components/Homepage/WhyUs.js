@@ -55,7 +55,7 @@ const WhyUs = () => {
             <div className="fs-1 text-center text-primary mb-4">
               {item.icon}
             </div>
-            <h3 className="fs-6 text-center mb-3">{item.title}</h3>
+            <h3 className="fs-6 text-center fw-bold mb-3">{item.title}</h3>
             <p className="small text-center">{item.description}</p>
           </Col>
         ))}
