@@ -54,15 +54,15 @@ const Reviews = () => {
       <Container fluid className="bg-secondary">
         <Container className="py-5">
           <Row xs="1" sm="2" md="4">
-            <Col className="text-center py-3">
-              <p className="fw-bold fs-5">
+            <Col className="text-center py-5">
+              <p className="fw-bold fs-5 m-0">
                 <AnimateNumber number={300} />
                 {' '}
                 Clientes sastifechos
               </p>
             </Col>
-            <Col className="text-center py-3">
-              <p className="fw-bold fs-5">
+            <Col className="text-center py-5">
+              <p className="fw-bold fs-5 m-0">
                 +
                 {' '}
                 <AnimateNumber number={20} />
@@ -70,15 +70,15 @@ const Reviews = () => {
                 Años de experiencia
               </p>
             </Col>
-            <Col className="text-center py-3">
-              <p className="fw-bold fs-5">
+            <Col className="text-center py-5">
+              <p className="fw-bold fs-5 m-0">
                 <AnimateNumber number={4000} />
                 {' '}
                 Horas de guiado
               </p>
             </Col>
-            <Col className="text-center py-3">
-              <p className="fw-bold fs-5">
+            <Col className="text-center py-5">
+              <p className="fw-bold fs-5 m-0">
                 +
                 {' '}
                 <AnimateNumber number={1200} />
