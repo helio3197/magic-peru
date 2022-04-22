@@ -11,9 +11,9 @@ const Contact = ({ id }) => {
   const [inputVal, setInputVal] = useState('');
 
   return (
-    <Container className="my-5" id={id}>
-      <Row xs="1" sm="2" className="px-3 px-sm-0">
-        <Col className="d-flex flex-column justify-content-center">
+    <Container as="section" className="my-5" id={id}>
+      <Row xs="1" sm="2">
+        <Col className="d-flex flex-column justify-content-center order-last order-sm-first">
           <h2 className="text-center">
             Comuniquese con nosotros...
           </h2>
