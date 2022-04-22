@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import toLink from '../../utils';
+import { toNavLink, toLink } from '../../utils';
 
 const Header = () => (
   <Navbar as="header" expand="sm" className="border-bottom">
@@ -16,16 +16,16 @@ const Header = () => (
       <Navbar.Toggle aria-controls="navbar-nav" />
       <Navbar.Collapse id="navbar-nav">
         <Nav className="mx-auto gap-sm-3">
-          <Nav.Link as={toLink} href="/inicio">
+          <Nav.Link as={toNavLink} href="/" style={({ isActive }) => (isActive ? { color: 'black' } : {})}>
             Inicio
           </Nav.Link>
-          <Nav.Link as={toLink} href="/nosotros">
+          <Nav.Link as={toNavLink} href="/nosotros">
             Quienes Somos
           </Nav.Link>
-          <Nav.Link as={toLink} href="/tours">
+          <Nav.Link as={toNavLink} href="/tours">
             Tours
           </Nav.Link>
-          <Nav.Link as={toLink} href="/contacto">
+          <Nav.Link as={toNavLink} href="/contacto">
             Contáctenos
           </Nav.Link>
         </Nav>

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const toLink = ({ children, className, href }) => (
   <Link to={href} className={className}>
@@ -6,4 +6,12 @@ const toLink = ({ children, className, href }) => (
   </Link>
 );
 
-export default toLink;
+const toNavLink = ({
+  children, className, href, style,
+}) => (
+  <NavLink to={href} className={className} style={style}>
+    {children}
+  </NavLink>
+);
+
+export { toLink, toNavLink };

@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import toLink from '../../utils';
+import { toLink } from '../../utils';
 
 const Headline = () => (
   <Container as="section" className="headline">
