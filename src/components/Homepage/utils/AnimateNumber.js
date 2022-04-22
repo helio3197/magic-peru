@@ -38,6 +38,8 @@ const AnimateNumber = ({
     } else {
       window.addEventListener('scroll', runAnimation);
     }
+
+    return () => window.removeEventListener('scroll', runAnimation);
   }, []);
 
   return (
