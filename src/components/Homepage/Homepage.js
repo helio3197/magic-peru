@@ -13,7 +13,7 @@ const Homepage = () => (
     <Destinies />
     <PhotoGallery />
     <Reviews />
-    <Contact />
+    <Contact id="contact" />
   </Container>
 );
 

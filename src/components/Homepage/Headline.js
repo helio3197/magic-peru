@@ -38,7 +38,7 @@ const Headline = () => {
         ))}
       </Carousel>
       <div className="d-flex gap-2 gap-sm-4 position-absolute headline-buttons">
-        <Button>
+        <Button as="a" href="#contact">
           Haga su reserva
         </Button>
         <Button href="/contacto" variant="outline-primary" as={toLink}>

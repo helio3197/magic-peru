@@ -7,9 +7,9 @@ const toLink = ({ children, className, href }) => (
 );
 
 const toNavLink = ({
-  children, className, href, style,
+  children, className, href, style, onClick,
 }) => (
-  <NavLink to={href} className={className} style={style}>
+  <NavLink to={href} className={className} style={style} onClick={onClick}>
     {children}
   </NavLink>
 );

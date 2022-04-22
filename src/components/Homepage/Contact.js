@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,11 +7,11 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import contactImage from '../../assets/contact-placeholder.png';
 
-const Contact = () => {
+const Contact = ({ id }) => {
   const [inputVal, setInputVal] = useState('');
 
   return (
-    <Container className="my-5">
+    <Container className="my-5" id={id}>
       <Row xs="1" sm="2" className="px-3 px-sm-0">
         <Col className="d-flex flex-column justify-content-center">
           <h2 className="text-center">
@@ -54,6 +55,14 @@ const Contact = () => {
       </Row>
     </Container>
   );
+};
+
+Contact.propTypes = {
+  id: PropTypes.string,
+};
+
+Contact.defaultProps = {
+  id: undefined,
 };
 
 export default Contact;
