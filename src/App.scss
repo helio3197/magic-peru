@@ -11,15 +11,57 @@
   margin-top: 7rem;
   margin-bottom: 7rem;
 
-  > h1,
-  > p {
-    max-width: 640px;
-    text-align: center;
+  .headline-buttons {
+    bottom: 60px;
+
+    @media (min-width: 375px) {
+      bottom: 75px;
+    }
+
+    @media (min-width: 964px) {
+      bottom: 125px;
+    }
+  }
+
+  .carousel-heading {
+    h1,
+    p {
+      max-width: 640px;
+      text-align: center;
+    }
   }
 
   @media (max-width: 575px) {
     margin-top: 4rem;
     margin-bottom: 4rem;
+  }
+}
+
+.headline-carousel {
+  .carousel-item > div {
+    max-height: 573px;
+    min-height: 448px;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  .carousel-heading {
+    bottom: 125px;
+
+    @media (min-width: 375px) {
+      bottom: 150px;
+    }
+
+    @media (min-width: 964px) {
+      bottom: 250px;
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 8%;
   }
 }
 
