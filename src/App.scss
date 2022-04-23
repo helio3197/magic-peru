@@ -4,6 +4,16 @@
   --bs-gutter-x: 1rem;
 }
 
+.section-margin {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+
+  @media (max-width: 575px) {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
 .headline {
   display: flex;
   flex-direction: column;
