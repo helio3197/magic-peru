@@ -5,10 +5,10 @@ import { FiBox, FiTruck } from 'react-icons/fi';
 import ourMissionImg from '../../assets/contact-placeholder.png';
 
 const OurMission = () => (
-  <Container as="section">
+  <Container as="section" className="section-margin">
     <Row xs="1" md="2">
       <Col className="d-flex flex-column justify-content-center order-last order-md-first">
-        <h2 className="mb-5">Nuestra mision</h2>
+        <h2 className="mb-5 text-center text-md-start">Nuestra mision</h2>
         <Row xs="2">
           <Col>
             <div className="text-primary fs-1 text-center mb-3">
