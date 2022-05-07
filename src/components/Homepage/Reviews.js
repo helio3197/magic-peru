@@ -51,7 +51,7 @@ const Reviews = () => {
           ))}
         </Carousel>
       </Container>
-      <Container fluid className="bg-secondary">
+      <Container fluid className="bg-secondary clientes">
         <Container className="py-5">
           <Row xs="1" sm="2" md="4">
             <Col className="text-center py-5">

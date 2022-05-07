@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import { toLink } from '../../utils';
 
 const Footer = () => (
-  <Container fluid as="footer" className="p-0 bg-secondary">
+  <Container fluid as="footer" className="p-0 bg-secondary footer">
     <Container className="py-4">
       <Row xs="1" sm="2" md="4">
         <Col>

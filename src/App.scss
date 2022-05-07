@@ -1,5 +1,29 @@
 @import './index.scss';
 
+/* TEST STARTS HERE */
+
+body{
+  background-color:#f8f5f4;
+}
+
+.clientes{
+  background-color: #fff !important;
+  
+  p{
+    color:#2f2e2e;
+  }
+
+}
+
+.footer{
+  background-color:#2f2e2e !important;
+  p, li{
+    color:#f8f5f4;
+  }
+}
+
+/* TEST ENDS HERE */
+
 :root {
   --bs-gutter-x: 1rem;
 }

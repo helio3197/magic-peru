@@ -1,11 +1,23 @@
+Icons
 Valor por su dinero: <FontAwesomeIcon icon="fa-solid fa-money-bill" />
 Variedad de Destinos: <FontAwesomeIcon icon="fa-solid fa-map" />
 Mejores precios garantizados: <FontAwesomeIcon icon="fa-solid fa-hand-holding-dollar" />
 Reservamos sus tickets de tren: <FontAwesomeIcon icon="fa-solid fa-tickets-airline" />
 +20 Años de experiencia: <FontAwesomeIcon icon="fa-solid fa-calendar-days" />
 
-
 300 Clientes satisfechos: <FontAwesomeIcon icon="fa-solid fa-people-group" />
 +20 Años de experiencia: <FontAwesomeIcon icon="fa-solid fa-handshake" />
 +400 horas de guiado: <FontAwesomeIcon icon="fa-solid fa-business-time" />
 +1200 Tours completados: <FontAwesomeIcon icon="fa-solid fa-backpack" />
+
+
+Fonts
+Roboto Flex - https://fonts.google.com/specimen/Roboto+Flex?preview.text=Your%20advisor%20can%20arrange&preview.text_type=custom
+Montserrat - https://fonts.google.com/specimen/Montserrat?preview.text=Your%20advisor%20can%20arrange&preview.text_type=custom
+
+
+Colors
+Backgorund: #f8f5f4
+            #2950b8
+            #f79b49
+            #2f2e2e
