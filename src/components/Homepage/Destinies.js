@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import placeholderImg from '../../assets/destiny-placeholder.png';
 
-const Destinies = () => {
+const Destinies = ({ id }) => {
   const destiniesItems = [
     {
       image: placeholderImg,
@@ -32,7 +33,7 @@ const Destinies = () => {
   ];
 
   return (
-    <Container as="section" className="headline mt-5">
+    <Container as="section" className="headline mt-5" id={id}>
       <h2>Destinos Favoritos</h2>
       <Row xs="1" md="2" lg="4" className="mt-3 px-sm-3 px-md-0">
         {destiniesItems.map((item) => (
@@ -47,6 +48,14 @@ const Destinies = () => {
       </Row>
     </Container>
   );
+};
+
+Destinies.propTypes = {
+  id: PropTypes.string,
+};
+
+Destinies.defaultProps = {
+  id: undefined,
 };
 
 export default Destinies;
