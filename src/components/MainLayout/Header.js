@@ -25,9 +25,6 @@ const Header = () => (
           <Nav.Link as={toNavLink} href="/tours">
             Tours
           </Nav.Link>
-          <Nav.Link as={toNavLink} href="/contacto">
-            Contáctenos
-          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
