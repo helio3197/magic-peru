@@ -3,10 +3,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import DestinyCard from './DestiniesCards/DestinyCard';
-import placeholderImg from '../../assets/destiny-placeholder.png';
-import pachaImg from '../../assets/lima/pachacamac/pacha-1.jpg';
+// import placeholderImg from '../../assets/destiny-placeholder.png';
+// import pachaImg from '../../assets/lima/pachacamac/pacha-1.jpg';
+import favorites from '../../data/favorites';
 
 const Destinies = ({ id }) => {
+  /*
   const destiniesItems = [
     {
       image: pachaImg,
@@ -33,20 +35,23 @@ const Destinies = ({ id }) => {
       id: 'cusco-machupicchu',
     },
   ];
+  */
+
+  const destiniesItems = favorites;
 
   return (
     <Container as="section" className="headline mt-5" id={id}>
       <h2>Destinos Favoritos</h2>
       <Row xs="1" className="mt-3 px-sm-3 px-md-0 justify-content-center">
         {destiniesItems.map((item) => (
-          <Col key={item.id} className="py-3" style={{ maxWidth: '356px' }}>
+          <Col key={item.tourName} className="py-3" style={{ maxWidth: '356px' }}>
             <DestinyCard
-              image={item.image}
-              title={item.title}
+              image={item.tourImg[0]}
+              title={item.tourName}
               description={item.description}
               rating={4}
-              duration="1 día"
-              languages="Spanish"
+              duration={item.duration}
+              languages={item.idiomas}
             />
           </Col>
         ))}

@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 import { BsStarFill, BsStar } from 'react-icons/bs';
 import placeholderImg from '../../../assets/placeholder-3-2.png';
+import { toLink } from '../../../utils';
 
 const DestinyCard = ({
   image, title, description, rating, duration, languages,
@@ -35,7 +36,7 @@ const DestinyCard = ({
   };
 
   return (
-    <Card className="destiny-card">
+    <Card className="destiny-card h-100 shadow overflow-hidden" as={toLink} href="tours">
       <Card.Img
         variant="top"
         src={image}
@@ -45,21 +46,23 @@ const DestinyCard = ({
           aspectRatio: '3/2',
         }}
       />
-      <Card.Body className="p-4">
+      <Card.Body className="p-4 d-flex flex-column">
         <Card.Title as="h3">{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
-        <div className="d-flex gap-2 align-items-end mb-3">
-          <h4 className="m-0">Rating:</h4>
-          {printRating(rating)}
+        <div className="mt-auto">
+          <div className="d-flex gap-2 align-items-end mb-3">
+            <h4 className="m-0">Rating:</h4>
+            {printRating(rating)}
+          </div>
+          <h4 className="mb-3">
+            Duración:
+            <span className="fs-6 fw-normal ms-2">{duration}</span>
+          </h4>
+          <h4 className="mb-3">
+            Idiomas:
+            <span className="fs-6 fw-normal ms-2">{languages}</span>
+          </h4>
         </div>
-        <h4 className="mb-3">
-          Duración:
-          <span className="fs-6 fw-normal ms-2">{duration}</span>
-        </h4>
-        <h4 className="mb-3">
-          Idiomas:
-          <span className="fs-6 fw-normal ms-2">{languages}</span>
-        </h4>
       </Card.Body>
     </Card>
   );

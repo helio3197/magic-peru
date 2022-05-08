@@ -127,6 +127,11 @@ body {
 }
 
 .destiny-card {
+  border-radius: 10px;
+  color: initial;
+  text-decoration: initial;
+  transition: all 0.3s;
+
   .card-title {
     font-size: 1rem;
     padding: 2px 10px;
@@ -148,6 +153,10 @@ body {
 
   ul {
     color: #fec107;
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 }
 
