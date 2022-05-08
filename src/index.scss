@@ -6,8 +6,11 @@ $secondary: #d6e5ff;
 
 .image-gallery {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  .image-gallery-image {
+  .image-gallery-image {   
     max-height: none;
     object-fit: cover;
     aspect-ratio: 5 / 3;
