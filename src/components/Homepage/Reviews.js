@@ -2,7 +2,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
-import { FaQuoteLeft } from 'react-icons/fa';
+import { FaQuoteLeft, FaHandshake, FaBusinessTime } from 'react-icons/fa';
+import { IoIosPeople } from 'react-icons/io';
+import { MdBackpack } from 'react-icons/md';
 import AnimateNumber from './utils/AnimateNumber';
 import reviewImg from '../../assets/review-placeholder.png';
 
@@ -51,17 +53,23 @@ const Reviews = () => {
           ))}
         </Carousel>
       </Container>
-      <Container fluid className="bg-secondary clientes">
-        <Container className="py-5">
+      <Container fluid className="bg-primary">
+        <Container className="py-5 text-light">
           <Row xs="1" sm="2" md="4">
-            <Col className="text-center py-5">
+            <Col className="text-center">
+              <div className="fs-1 text-center">
+                <IoIosPeople />
+              </div>
               <p className="fw-bold fs-5 m-0">
                 <AnimateNumber number={300} />
                 {' '}
                 Clientes sastifechos
               </p>
             </Col>
-            <Col className="text-center py-5">
+            <Col className="text-center">
+              <div className="fs-1 text-center">
+                <FaHandshake />
+              </div>
               <p className="fw-bold fs-5 m-0">
                 +
                 {' '}
@@ -70,14 +78,20 @@ const Reviews = () => {
                 Años de experiencia
               </p>
             </Col>
-            <Col className="text-center py-5">
+            <Col className="text-center">
+              <div className="fs-1 text-center">
+                <FaBusinessTime />
+              </div>
               <p className="fw-bold fs-5 m-0">
                 <AnimateNumber number={4000} />
                 {' '}
                 Horas de guiado
               </p>
             </Col>
-            <Col className="text-center py-5">
+            <Col className="text-center">
+              <div className="fs-1 text-center">
+                <MdBackpack />
+              </div>
               <p className="fw-bold fs-5 m-0">
                 +
                 {' '}

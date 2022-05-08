@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import { toNavLink, toLink } from '../../utils';
 
 const Header = () => (
-  <Navbar collapseOnSelect as="header" bg="primary" expand="sm">
+  <Navbar collapseOnSelect as="header" bg="primary" expand="sm" variant="light">
     <Container>
       <Navbar.Brand
         className="ms-md-5"

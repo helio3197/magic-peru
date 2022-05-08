@@ -17,9 +17,14 @@ body {
 .footer {
   background-color: #2f2e2e !important;
 
+  h2 {
+    color: $primary;
+  }
+
   p,
-  li {
-    color: #f8f5f4;
+  li,
+  li > a {
+    color: #f8f5f4 !important;
   }
 }
 

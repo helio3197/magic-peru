@@ -3,7 +3,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import aboutUsImg from '../../assets/about-us-placeholder.png';
-import { toLink } from '../../utils';
 
 const WhoWeAre = () => (
   <Container as="section" className="section-margin">
@@ -19,7 +18,7 @@ const WhoWeAre = () => (
           nam no suscipit quaerendum. At nam minimum ponderum. Est audiam animal molestiae te.
           Ex duo eripuit mentitum.
         </p>
-        <Button as={toLink} href="/contacto" variant="outline-primary">
+        <Button href="#contact" variant="outline-primary">
           Contáctenos
         </Button>
       </Col>
