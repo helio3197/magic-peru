@@ -2,23 +2,29 @@
 
 /* TEST STARTS HERE */
 
-body{
-  background-color:#f8f5f4;
+body {
+  background-color: #f8f5f4;
 }
 
-.clientes{
+.clientes {
   background-color: #fff !important;
-  
-  p{
-    color:#2f2e2e;
+
+  p {
+    color: #2f2e2e;
+  }
+}
+
+.footer {
+  background-color: #2f2e2e !important;
+
+  h2 {
+    color: $primary;
   }
 
-}
-
-.footer{
-  background-color:#2f2e2e !important;
-  p, li{
-    color:#f8f5f4;
+  p,
+  li,
+  li > a {
+    color: #f8f5f4 !important;
   }
 }
 
@@ -42,11 +48,16 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 7rem;
-  margin-bottom: 7rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 
   .headline-buttons {
     bottom: 60px;
+
+    a {
+      filter: drop-shadow(2px 4px 6px black);
+      font-weight: 500;
+    }
 
     @media (min-width: 375px) {
       bottom: 75px;
@@ -54,6 +65,15 @@ body{
 
     @media (min-width: 964px) {
       bottom: 125px;
+    }
+  }
+
+  .carousel-alt-btn {
+    background-color: #00000038;
+
+    &:hover {
+      color: black;
+      background-color: $primary;
     }
   }
 
@@ -79,10 +99,22 @@ body{
 
   img {
     object-fit: cover;
+    filter: brightness(0.75);
   }
 
   .carousel-heading {
     bottom: 125px;
+
+    h1 {
+      filter: drop-shadow(2px 4px 6px black);
+      font-weight: bold;
+    }
+
+    p {
+      color: #d8d0d0;
+      filter: drop-shadow(2px 4px 6px black);
+      font-weight: bold;
+    }
 
     @media (min-width: 375px) {
       bottom: 150px;
@@ -96,6 +128,40 @@ body{
   .carousel-control-prev,
   .carousel-control-next {
     width: 8%;
+  }
+}
+
+.destiny-card {
+  border-radius: 10px;
+  color: initial;
+  text-decoration: initial;
+  transition: all 0.3s;
+
+  .card-title {
+    font-size: 1rem;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    background-color: $primary;
+    width: fit-content;
+    color: white;
+  }
+
+  .card-text {
+    font-size: 0.875rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  ul {
+    color: #fec107;
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 }
 

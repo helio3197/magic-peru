@@ -10,7 +10,7 @@ const Homepage = () => (
   <Container fluid as="main" className="p-0 d-inline-block">
     <Headline />
     <WhyUs />
-    <Destinies />
+    <Destinies id="favorites" />
     <PhotoGallery />
     <Reviews />
     <Contact id="contact" />

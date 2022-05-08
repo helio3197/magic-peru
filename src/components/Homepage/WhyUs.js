@@ -1,18 +1,22 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { FiBriefcase, FiLifeBuoy, FiTool } from 'react-icons/fi';
+import { FiTool } from 'react-icons/fi';
+import { MdAirplaneTicket } from 'react-icons/md';
+import {
+  FaMoneyBillWave, FaMap, FaHandHoldingUsd, FaCalendarAlt,
+} from 'react-icons/fa';
 
 const WhyUs = () => {
   const itemsArr = [
     {
-      icon: <FiBriefcase />,
+      icon: <FaMoneyBillWave />,
       title: 'Valor por su dinero',
       description: 'At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.',
       id: 'value',
     },
     {
-      icon: <FiLifeBuoy />,
+      icon: <FaMap />,
       title: 'Variedad de Destinos',
       description: 'At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.',
       id: 'variety',
@@ -24,19 +28,19 @@ const WhyUs = () => {
       id: 'support',
     },
     {
-      icon: <FiBriefcase />,
+      icon: <FaCalendarAlt />,
       title: '+ 20 años de experiencia',
       description: 'At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.',
       id: 'experience',
     },
     {
-      icon: <FiLifeBuoy />,
+      icon: <FaHandHoldingUsd />,
       title: 'Mejores precios garantizados',
       description: 'At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.',
       id: 'prices',
     },
     {
-      icon: <FiTool />,
+      icon: <MdAirplaneTicket />,
       title: 'Reservamos sus tickets de tren, avion, bus y hotel.',
       description: 'At eripuit signiferumque sea, vel ad mucius molestie, cu labitur iuvaret vulputate sed.',
       id: 'reservations',

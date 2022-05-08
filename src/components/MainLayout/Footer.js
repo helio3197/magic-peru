@@ -28,13 +28,13 @@ const Footer = () => (
           <div className="px-3 p-sm-0">
             <h2 className="fs-6">Contáctenos</h2>
             <ul className="my-4 list-unstyled">
-              <li className="mb-2 text-black-50">
+              <li className="mb-2">
                 email: prueba@gmail.com
               </li>
-              <li className="mb-2 text-black-50">
+              <li className="mb-2">
                 telefono : 555 - 5555
               </li>
-              <li className="mb-2 text-black-50">
+              <li className="mb-2">
                 direccion: av universitaria 8788
               </li>
             </ul>
@@ -45,28 +45,18 @@ const Footer = () => (
             <h2 className="fs-6">Links</h2>
             <ul className="my-4 list-unstyled">
               <li className="mb-2">
-                <Link to="/" className="text-black-50 text-decoration-none">
+                <Link to="/" className="text-decoration-none">
                   inicio
                 </Link>
               </li>
               <li className="mb-2">
-                <Link to="/servicios" className="text-black-50 text-decoration-none">
-                  servicios
+                <Link to="/servicios" className="text-decoration-none">
+                  quienes somos
                 </Link>
               </li>
               <li className="mb-2">
-                <Link to="/tours" className="text-black-50 text-decoration-none">
+                <Link to="/tours" className="text-decoration-none">
                   tours
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link to="/galeria" className="text-black-50 text-decoration-none">
-                  galería
-                </Link>
-              </li>
-              <li className="mb-2">
-                <Link to="/contacto" className="text-black-50 text-decoration-none">
-                  contacto
                 </Link>
               </li>
             </ul>
@@ -79,7 +69,7 @@ const Footer = () => (
               <li className="mb-2">
                 <a
                   href="https://facebook.com"
-                  className="text-black-50 text-decoration-none"
+                  className="text-decoration-none"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -89,7 +79,7 @@ const Footer = () => (
               <li className="mb-2">
                 <a
                   href="https://instagram.com"
-                  className="text-black-50 text-decoration-none"
+                  className="text-decoration-none"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
