@@ -2,3 +2,23 @@ $primary: #f79b49;
 $secondary: #d6e5ff;
 
 @import '~bootstrap/scss/bootstrap.scss';
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+.image-gallery {
+  width: 100%;
+
+  .image-gallery-image {
+    max-height: none;
+    object-fit: cover;
+    aspect-ratio: 5 / 3;
+
+    @media screen and (display-mode: fullscreen) {
+      object-fit: contain;
+    }
+  }
+
+  .image-gallery-thumbnail-image {
+    aspect-ratio: 5 / 3;
+    object-fit: cover;
+  }
+}
