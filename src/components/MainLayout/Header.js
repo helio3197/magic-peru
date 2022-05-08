@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import { toNavLink, toLink } from '../../utils';
 
 const Header = () => (
-  <Navbar collapseOnSelect as="header" bg="primary" expand="sm" variant="light">
+  <Navbar collapseOnSelect as="header" bg="primary" expand="sm" variant="dark">
     <Container>
       <Navbar.Brand
         className="ms-md-5"
@@ -16,13 +16,13 @@ const Header = () => (
       <Navbar.Toggle aria-controls="navbar-nav" />
       <Navbar.Collapse id="navbar-nav">
         <Nav className="mx-auto gap-sm-3">
-          <Nav.Link as={toNavLink} href="/" style={({ isActive }) => (isActive ? { color: 'black' } : {})}>
+          <Nav.Link as={toNavLink} href="/" style={({ isActive }) => (isActive ? { color: 'white' } : {})}>
             Inicio
           </Nav.Link>
-          <Nav.Link as={toNavLink} href="/nosotros">
+          <Nav.Link as={toNavLink} href="/nosotros" style={({ isActive }) => (isActive ? { color: 'white' } : {})}>
             Quienes Somos
           </Nav.Link>
-          <Nav.Link as={toNavLink} href="/tours">
+          <Nav.Link as={toNavLink} href="/tours" style={({ isActive }) => (isActive ? { color: 'white' } : {})}>
             Tours
           </Nav.Link>
         </Nav>
