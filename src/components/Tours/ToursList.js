@@ -122,7 +122,15 @@ const ToursList = ({ title, tours }) => {
 
 ToursList.propTypes = {
   title: PropTypes.string.isRequired,
-  tours: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+  tours: PropTypes.arrayOf(PropTypes.shape({
+    tourName: PropTypes.string,
+    tourImg: PropTypes.arrayOf(PropTypes.string),
+    description: PropTypes.string,
+    departures: PropTypes.string,
+    duration: PropTypes.string,
+    minimumPassegensers: PropTypes.number,
+    idiomas: PropTypes.string,
+  })).isRequired,
 };
 
 export default ToursList;
