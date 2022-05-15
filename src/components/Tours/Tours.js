@@ -6,10 +6,14 @@ import data from '../../data/info';
 const Tours = () => (
   <Container fluid as="main" className="p-0 d-inline-block">
     <h1 className="text-center mt-5 mb-4">Tours y Paquetes</h1>
-    <ToursList
-      title={data.lima.title}
-      tours={data.lima.tours}
-    />
+    {Object.keys(data).map((key, index) => (
+      <ToursList
+        id={`carousel-${index + 1}`}
+        key={data[key].title}
+        title={data[key].title}
+        tours={data[key].tours}
+      />
+    ))}
     <Contact />
   </Container>
 );

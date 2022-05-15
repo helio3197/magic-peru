@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import DestinyCard from '../Homepage/DestiniesCards/DestinyCard';
 
-const ToursList = ({ title, tours }) => {
+const ToursList = ({ title, tours, id }) => {
   const mediaMd = window.matchMedia('(max-width: 767px)');
   const mediaMdXl = window.matchMedia('(min-width: 768px) and (max-width: 1199px)');
 
@@ -107,12 +107,17 @@ const ToursList = ({ title, tours }) => {
     <Container as="section">
       <h2 className="text-center">{title}</h2>
       <Carousel
+        id={id}
         variant="dark"
         className="review-carousel tours-carousel pb-4"
         activeIndex={activeSlide}
         onSelect={(selectedSlide) => setActiveSlide(selectedSlide)}
-        onSlide={() => { document.querySelector('.carousel-inner').style.overflow = 'hidden'; }}
-        onSlid={() => { document.querySelector('.carousel-inner').style.overflow = ''; }}
+        onSlide={() => {
+          document.getElementById(id).querySelector('.carousel-inner').style.overflow = 'hidden';
+        }}
+        onSlid={() => {
+          document.getElementById(id).querySelector('.carousel-inner').style.overflow = '';
+        }}
       >
         {renderCards(cardsPerRow)}
       </Carousel>
@@ -121,6 +126,7 @@ const ToursList = ({ title, tours }) => {
 };
 
 ToursList.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   tours: PropTypes.arrayOf(PropTypes.shape({
     tourName: PropTypes.string,
