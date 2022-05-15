@@ -104,8 +104,8 @@ const ToursList = ({ title, tours, id }) => {
   };
 
   return (
-    <Container as="section">
-      <h2 className="text-center">{title}</h2>
+    <Container as="section" className="mb-5">
+      <h2 className="text-center text-decoration-underline">{title}</h2>
       <Carousel
         id={id}
         variant="dark"
