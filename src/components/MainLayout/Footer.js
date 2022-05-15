@@ -45,17 +45,17 @@ const Footer = () => (
             <h2 className="fs-6">Links</h2>
             <ul className="my-4 list-unstyled">
               <li className="mb-2">
-                <Link to="/" className="text-decoration-none">
+                <Link to="/" className="text-decoration-none" onClick={() => window.scrollTo(0, 0)}>
                   inicio
                 </Link>
               </li>
               <li className="mb-2">
-                <Link to="/servicios" className="text-decoration-none">
+                <Link to="/nosotros" className="text-decoration-none" onClick={() => window.scrollTo(0, 0)}>
                   quienes somos
                 </Link>
               </li>
               <li className="mb-2">
-                <Link to="/tours" className="text-decoration-none">
+                <Link to="/tours" className="text-decoration-none" onClick={() => window.scrollTo(0, 0)}>
                   tours
                 </Link>
               </li>
