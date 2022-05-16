@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
+import Contact from '../Homepage/Contact';
 import data from '../../data/info';
 
 const TourDetails = () => {
@@ -14,7 +15,8 @@ const TourDetails = () => {
 
   return (
     <Container fluid as="main" className="p-0 d-inline-block">
-      <h1>{tourData.tourName}</h1>
+      <h1 className="text-center mt-5 mb-4">{tourData.tourName}</h1>
+      <Contact />
     </Container>
   );
 };

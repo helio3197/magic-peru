@@ -36,7 +36,12 @@ const DestinyCard = ({
   };
 
   return (
-    <Card className="destiny-card h-100 shadow overflow-hidden" as={toLink} href={`/tours/${path}`}>
+    <Card
+      className="destiny-card h-100 shadow overflow-hidden"
+      as={toLink}
+      href={`/tours/${path}`}
+      onClick={() => window.scrollTo(0, 0)}
+    >
       <Card.Img
         variant="top"
         src={image}
