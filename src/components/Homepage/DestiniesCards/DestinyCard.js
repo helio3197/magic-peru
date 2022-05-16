@@ -5,7 +5,7 @@ import placeholderImg from '../../../assets/placeholder-3-2.png';
 import { toLink } from '../../../utils';
 
 const DestinyCard = ({
-  image, title, description, rating, duration, languages,
+  image, title, description, rating, duration, languages, path,
 }) => {
   const printRating = (rating) => {
     let ratingCount;
@@ -36,7 +36,7 @@ const DestinyCard = ({
   };
 
   return (
-    <Card className="destiny-card h-100 shadow overflow-hidden" as={toLink} href="tours">
+    <Card className="destiny-card h-100 shadow overflow-hidden" as={toLink} href={`/tours/${path}`}>
       <Card.Img
         variant="top"
         src={image}
@@ -75,6 +75,7 @@ DestinyCard.propTypes = {
   rating: PropTypes.number.isRequired,
   duration: PropTypes.string.isRequired,
   languages: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 DestinyCard.defaultProps = {
