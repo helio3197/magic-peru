@@ -11,6 +11,8 @@ const favorites = [
     duration: '4 Horas',
     minimumPassegensers: 2,
     idiomas: 'Ingles & Español',
+    rating: 5,
+    path: 'lima-city-tour',
   },
   {
     tourName: 'Lima Fountains',
@@ -21,6 +23,8 @@ const favorites = [
     duration: '3 Horas',
     minimumPassegensers: 2,
     idiomas: 'Ingles & Español',
+    rating: 5,
+    path: 'lima-fountains',
   },
   {
     tourName: 'Paracas & Ica',
@@ -30,6 +34,8 @@ const favorites = [
     duration: '3 Horas',
     minimumPassegensers: 2,
     idiomas: 'Ingles & Español',
+    rating: 5,
+    path: 'paracas-and-ica',
   },
   {
     tourName: 'Dinner Show',
@@ -39,6 +45,8 @@ const favorites = [
     duration: '3 Horas',
     minimumPassegensers: 2,
     idiomas: 'Ingles & Español',
+    rating: 5,
+    path: 'dinner-show',
   },
   {
     tourName: 'Pachacamac Adoratory',
@@ -49,6 +57,8 @@ const favorites = [
     duration: '3.5 Horas',
     minimumPassegensers: 2,
     idiomas: 'Ingles & Español',
+    rating: 5,
+    path: 'pachacamac-adoratory',
   },
   {
     tourName: 'Peruvian Paso Horse',
@@ -59,6 +69,8 @@ const favorites = [
     duration: '4.5 Horas',
     minimumPassegensers: 2,
     idiomas: 'Ingles & Español',
+    rating: 5,
+    path: 'peruvian-paso-horse',
   },
   {
     tourName: 'Gastronomical Tour',
@@ -69,6 +81,8 @@ const favorites = [
     duration: '4.5 Horas',
     minimumPassegensers: 2,
     idiomas: 'Ingles & Español',
+    rating: 5,
+    path: 'gastronomical-tour',
   },
   {
     tourName: 'Cusco & Machupicchu',
@@ -78,6 +92,8 @@ const favorites = [
     duration: '4.5 Horas',
     minimumPassegensers: 2,
     idiomas: 'Ingles & Español',
+    rating: 5,
+    path: 'cusco-machupicchu',
   },
 ];
 

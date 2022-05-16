@@ -49,9 +49,10 @@ const Destinies = ({ id }) => {
               image={item.tourImg[0]}
               title={item.tourName}
               description={item.description}
-              rating={4}
+              rating={item.rating}
               duration={item.duration}
               languages={item.idiomas}
+              path={item.path}
             />
           </Col>
         ))}
