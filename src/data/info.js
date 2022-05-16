@@ -117,8 +117,8 @@ const data = {
       },
     ],
   },
-  limaSecond: {
-    title: 'Lima 2 TEST',
+  ica: {
+    title: 'Ica',
     tours: [
       {
         tourName: 'Lima City Tour',
