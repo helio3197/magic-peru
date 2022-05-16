@@ -187,4 +187,9 @@ body {
   .row {
     justify-content: center;
   }
+
+  .card-text {
+    max-height: 127px;
+    overflow: auto;
+  }
 }

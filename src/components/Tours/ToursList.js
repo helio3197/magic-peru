@@ -34,7 +34,7 @@ const ToursList = ({ title, tours, id }) => {
       case 1:
         return tours.map((item) => (
           <Carousel.Item key={item.tourName}>
-            <Row>
+            <Row style={{ height: '600px' }}>
               <Col className="py-3" style={{ maxWidth: '356px' }}>
                 <DestinyCard
                   image={item.tourImg[0]}
@@ -55,7 +55,7 @@ const ToursList = ({ title, tours, id }) => {
         for (let i = 0; i < tours.length; i += 2) {
           itemsArr.push(
             <Carousel.Item key={i}>
-              <Row>
+              <Row style={{ height: '600px' }}>
                 {tours.slice(i, i + 2).map((item) => (
                   <Col key={item.tourName} className="py-3" style={{ maxWidth: '356px' }}>
                     <DestinyCard
@@ -81,7 +81,7 @@ const ToursList = ({ title, tours, id }) => {
         for (let i = 0; i < tours.length; i += 3) {
           itemsArr.push(
             <Carousel.Item key={i}>
-              <Row>
+              <Row style={{ height: '600px' }}>
                 {tours.slice(i, i + 3).map((item) => (
                   <Col key={item.tourName} className="py-3" style={{ maxWidth: '356px' }}>
                     <DestinyCard
