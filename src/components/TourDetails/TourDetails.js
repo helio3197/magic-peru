@@ -1,14 +1,36 @@
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import ReactImageGallery from 'react-image-gallery';
 import Container from 'react-bootstrap/Container';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 import Contact from '../Homepage/Contact';
 import data from '../../data/info';
 import { toLink } from '../../utils';
+import spinner from '../../assets/loading-spinner.svg';
 
 const TourDetails = () => {
+  const mediaXs = window.matchMedia('(max-width: 575px)');
+
+  const checkMedia = () => {
+    if (mediaXs.matches) return 'bottom';
+
+    return 'right';
+  };
+
+  const [galleryBottom, setGalleryBottom] = useState(checkMedia());
+
+  useEffect(() => {
+    const listener = () => setGalleryBottom(checkMedia());
+
+    mediaXs.addEventListener('change', listener);
+
+    return () => mediaXs.removeEventListener('change', listener);
+  }, []);
+
   const { tourDetails } = useParams();
 
   const tourData = Object.keys(data).reduce((result, key) => {
@@ -17,6 +39,13 @@ const TourDetails = () => {
 
     return result;
   }, [])[0];
+
+  const gallery = tourData.tourImg.map((img) => ({
+    original: img,
+    thumbnail: img,
+    loading: spinner,
+    thumbnailLoading: spinner,
+  }));
 
   return (
     <Container fluid as="main" className="p-0 d-inline-block">
@@ -27,23 +56,54 @@ const TourDetails = () => {
           </Breadcrumb.Item>
         </Breadcrumb>
         <h1 className="text-center mb-4">{tourData.tourName}</h1>
-        <Row className="mt-1">
+        <ReactImageGallery
+          items={gallery}
+          thumbnailPosition={galleryBottom}
+          disableThumbnailScroll
+        />
+        <Row className="mt-4">
           <Col xs="12" lg="8">
-            <Image src={tourData.tourImg[0]} fluid className="w-100" style={{ aspectRatio: '3 / 2' }} />
-          </Col>
-          <Col xs="12" lg="4" className="pt-3 pt-lg-0">
             <h2>Descripción:</h2>
             <p>
               {tourData.description}
             </p>
           </Col>
+          <Col xs="12" lg="4">
+            <Card bg="primary">
+              <ListGroup>
+                <Container fluid className="px-2">
+                  <Row xs="1" sm="2" lg="1" className="px-1">
+                    <Col className="p-0">
+                      <ListGroup.Item className="bg-primary h-100">
+                        <h2 className="fs-4">Salidas:</h2>
+                        <p>{tourData.departures}</p>
+                      </ListGroup.Item>
+                    </Col>
+                    <Col className="p-0">
+                      <ListGroup.Item className="bg-primary h-100">
+                        <h2 className="fs-4">Duración:</h2>
+                        <p>{tourData.duration}</p>
+                      </ListGroup.Item>
+                    </Col>
+                    <Col className="p-0">
+                      <ListGroup.Item className="bg-primary h-100">
+                        <h2 className="fs-4">Idiomas:</h2>
+                        <p>{tourData.idiomas}</p>
+                        <p>{tourData.departures}</p>
+                      </ListGroup.Item>
+                    </Col>
+                    <Col className="p-0">
+                      <ListGroup.Item className="bg-primary h-100">
+                        <h2 className="fs-4">Mínimo de pasajeros:</h2>
+                        <p>{tourData.minimumPassegensers}</p>
+                      </ListGroup.Item>
+                    </Col>
+                  </Row>
+                </Container>
+              </ListGroup>
+            </Card>
+          </Col>
         </Row>
-        <h2 className="fs-3">Salidas:</h2>
-        <p>{tourData.departures}</p>
-        <h2 className="fs-3">Duración:</h2>
-        <p>{tourData.duration}</p>
-        <h2 className="fs-3">Idiomas:</h2>
-        <p>{tourData.idiomas}</p>
       </Container>
       <Contact />
     </Container>
