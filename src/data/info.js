@@ -1,12 +1,11 @@
-import limaCityTour1 from '../assets/lima/lima-city-tour/amor-1.jpg';
-import limaCityTour2 from '../assets/lima/lima-city-tour/amor-2.jpg';
-import limaCityTour3 from '../assets/lima/lima-city-tour/catacumba-1.jpg';
-import limaCityTour4 from '../assets/lima/lima-city-tour/francisco-1.jpg';
-import limaCityTour5 from '../assets/lima/lima-city-tour/francisco-2.jpg';
-import limaCityTour6 from '../assets/lima/lima-city-tour/francisco-3.jpg';
-import limaCityTour7 from '../assets/lima/lima-city-tour/huaca-1.jpg';
-import limaCityTour8 from '../assets/lima/lima-city-tour/huaca-2.jpg';
-import limaCityTour9 from '../assets/lima/lima-city-tour/martin-2.jpg';
+const importAll = (r) => r.keys().map(r);
+
+const limaCityTourImages = importAll(require.context('../assets/lima/lima-city-tour', false, /\.(png|jpe?g|svg)$/));
+const limaFountainsImages = importAll(require.context('../assets/lima/lima-fuentes', false, /\.(png|jpe?g|svg)$/));
+const dinnerShowImages = importAll(require.context('../assets/lima/dinner-show', false, /\.(png|jpe?g|svg)$/));
+const pachacamacAdoratoryImages = importAll(require.context('../assets/lima/pachacamac', false, /\.(png|jpe?g|svg)$/));
+const peruvianPasoHorseImages = importAll(require.context('../assets/lima/caballo-de-paso', false, /\.(png|jpe?g|svg)$/));
+const gastronomicalTourImages = importAll(require.context('../assets/lima/city-tour-gastronomico', false, /\.(png|jpe?g|svg)$/));
 
 const data = {
   lima: {
@@ -14,17 +13,7 @@ const data = {
     tours: [
       {
         tourName: 'Lima City Tour',
-        tourImg: [
-          limaCityTour1,
-          limaCityTour2,
-          limaCityTour3,
-          limaCityTour4,
-          limaCityTour5,
-          limaCityTour6,
-          limaCityTour7,
-          limaCityTour8,
-          limaCityTour9,
-        ],
+        tourImg: limaCityTourImages,
         description:
           'Una visita a la lima Prehispanica, Colonial y Moderna: Parque del Amor, Huaca Pucllana, Plaza San Martin, Plaza Mayor y Templo de San Francisco.',
         departures: 'Mañana & Noche',
@@ -36,7 +25,7 @@ const data = {
       },
       {
         tourName: 'Lima Fountains',
-        tourImg: [],
+        tourImg: limaFountainsImages,
         description:
           'Parque de la Reserva-Circuito Mágico del Agua, nos presenta un show de luz y color en sus diferentes fuentes. Record Guinness: La Fuente más alta del mundo.',
         departures: 'Martes - Domingo',
@@ -59,7 +48,7 @@ const data = {
       },
       {
         tourName: 'Dinner Show',
-        tourImg: [],
+        tourImg: dinnerShowImages,
         description: 'Traslado a restaurante donde se aprecian danzas de la Costa, Sierra y Selva del Peru y cena de comida tipica Peruana.',
         departures: '',
         duration: '3 Horas',
@@ -70,7 +59,7 @@ const data = {
       },
       {
         tourName: 'Pachacamac Adoratory',
-        tourImg: [],
+        tourImg: pachacamacAdoratoryImages,
         description:
           'Ubicado a 28km al sur de Lima, templos y palacios utilizados por las culturas Lima, Wary, Ichma e Inca desde el 200 AC al 1532 DC',
         departures: 'MARTES - JUEVES - VIERNES - SABADO',
@@ -82,7 +71,7 @@ const data = {
       },
       {
         tourName: 'Peruvian Paso Horse',
-        tourImg: [],
+        tourImg: peruvianPasoHorseImages,
         description:
           'En el siglo XVI llego el caballo Andaluz a Peru y despues de 400 años, varios cruces geneticos, seleccion y mejoramiento se obtuvo el Caballo de Paso Peruano: suavidad en su andas en forma diagonal. A 28km al sur de Lima se tendrá un show de este Caballo Peruano de Paso, incluye almuerzo.',
         departures: 'SABADO - DOMINGO',
@@ -94,7 +83,7 @@ const data = {
       },
       {
         tourName: 'Gastronomical Tour',
-        tourImg: [],
+        tourImg: gastronomicalTourImages,
         description:
           'Visite un mercado local para ver verduras, frutas, especies y mucho mas de la cocia Peruana. Luego, en una cevicheria local usted preparara su propio Ceviche y Pisco Sour. Delantal de cocina incluido.',
         departures: 'SABADO - DOMINGO',
@@ -122,17 +111,7 @@ const data = {
     tours: [
       {
         tourName: 'Lima City Tour',
-        tourImg: [
-          limaCityTour1,
-          limaCityTour2,
-          limaCityTour3,
-          limaCityTour4,
-          limaCityTour5,
-          limaCityTour6,
-          limaCityTour7,
-          limaCityTour8,
-          limaCityTour9,
-        ],
+        tourImg: limaCityTourImages,
         description:
           'Una visita a la lima Prehispanica, Colonial y Moderna: Parque del Amor, Huaca Pucllana, Plaza San Martin, Plaza Mayor y Templo de San Francisco.',
         departures: 'Mañana & Noche',

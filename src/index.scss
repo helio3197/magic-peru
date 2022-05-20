@@ -10,7 +10,11 @@ $secondary: #d6e5ff;
   flex-direction: column;
   justify-content: center;
 
-  .image-gallery-image {   
+  .image-gallery-content {
+    overflow: hidden;
+  }
+
+  .image-gallery-image {
     max-height: none;
     object-fit: cover;
     aspect-ratio: 5 / 3;
@@ -18,6 +22,32 @@ $secondary: #d6e5ff;
     @media screen and (display-mode: fullscreen) {
       object-fit: contain;
     }
+  }
+
+  .image-gallery-thumbnails {
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @supports (scrollbar-width: none) {
+      scrollbar-width: none;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .image-gallery-slide-wrapper.right {
+      width: calc(100% - 200px);
+    }
+
+    .image-gallery-thumbnails-wrapper.right {
+      width: 190px;
+    }
+  }
+
+  .image-gallery-thumbnail {
+    width: 100%;
   }
 
   .image-gallery-thumbnail-image {

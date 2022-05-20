@@ -1,7 +1,9 @@
 import { Link, NavLink } from 'react-router-dom';
 
-const toLink = ({ children, className, href }) => (
-  <Link to={href} className={className}>
+const toLink = ({
+  children, className, href, onClick,
+}) => (
+  <Link to={href} className={className} onClick={onClick}>
     {children}
   </Link>
 );
