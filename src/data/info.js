@@ -1,12 +1,8 @@
-import limaCityTour1 from '../assets/lima/lima-city-tour/amor-1.jpg';
-import limaCityTour2 from '../assets/lima/lima-city-tour/amor-2.jpg';
-import limaCityTour3 from '../assets/lima/lima-city-tour/catacumba-1.jpg';
-import limaCityTour4 from '../assets/lima/lima-city-tour/francisco-1.jpg';
-import limaCityTour5 from '../assets/lima/lima-city-tour/francisco-2.jpg';
-import limaCityTour6 from '../assets/lima/lima-city-tour/francisco-3.jpg';
-import limaCityTour7 from '../assets/lima/lima-city-tour/huaca-1.jpg';
-import limaCityTour8 from '../assets/lima/lima-city-tour/huaca-2.jpg';
-import limaCityTour9 from '../assets/lima/lima-city-tour/martin-2.jpg';
+const importAll = (r) => r.keys().map(r);
+
+const limaCityTourImages = importAll(require.context('../assets/lima/lima-city-tour', false, /\.(png|jpe?g|svg)$/));
+const limaFountainsImages = importAll(require.context('../assets/lima/lima-fuentes', false, /\.(png|jpe?g|svg)$/));
+const dinnerShowImages = importAll(require.context('../assets/lima/dinner-show', false, /\.(png|jpe?g|svg)$/));
 
 const data = {
   lima: {
@@ -14,17 +10,7 @@ const data = {
     tours: [
       {
         tourName: 'Lima City Tour',
-        tourImg: [
-          limaCityTour1,
-          limaCityTour2,
-          limaCityTour3,
-          limaCityTour4,
-          limaCityTour5,
-          limaCityTour6,
-          limaCityTour7,
-          limaCityTour8,
-          limaCityTour9,
-        ],
+        tourImg: limaCityTourImages,
         description:
           'Una visita a la lima Prehispanica, Colonial y Moderna: Parque del Amor, Huaca Pucllana, Plaza San Martin, Plaza Mayor y Templo de San Francisco.',
         departures: 'Mañana & Noche',
@@ -36,7 +22,7 @@ const data = {
       },
       {
         tourName: 'Lima Fountains',
-        tourImg: [],
+        tourImg: limaFountainsImages,
         description:
           'Parque de la Reserva-Circuito Mágico del Agua, nos presenta un show de luz y color en sus diferentes fuentes. Record Guinness: La Fuente más alta del mundo.',
         departures: 'Martes - Domingo',
@@ -59,7 +45,7 @@ const data = {
       },
       {
         tourName: 'Dinner Show',
-        tourImg: [],
+        tourImg: dinnerShowImages,
         description: 'Traslado a restaurante donde se aprecian danzas de la Costa, Sierra y Selva del Peru y cena de comida tipica Peruana.',
         departures: '',
         duration: '3 Horas',
@@ -122,17 +108,7 @@ const data = {
     tours: [
       {
         tourName: 'Lima City Tour',
-        tourImg: [
-          limaCityTour1,
-          limaCityTour2,
-          limaCityTour3,
-          limaCityTour4,
-          limaCityTour5,
-          limaCityTour6,
-          limaCityTour7,
-          limaCityTour8,
-          limaCityTour9,
-        ],
+        tourImg: limaCityTourImages,
         description:
           'Una visita a la lima Prehispanica, Colonial y Moderna: Parque del Amor, Huaca Pucllana, Plaza San Martin, Plaza Mayor y Templo de San Francisco.',
         departures: 'Mañana & Noche',
