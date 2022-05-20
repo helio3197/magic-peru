@@ -60,6 +60,7 @@ const TourDetails = () => {
           items={gallery}
           thumbnailPosition={galleryBottom}
           disableThumbnailScroll
+          disableThumbnailSwipe
         />
         <Row className="mt-4">
           <Col xs="12" lg="8">
