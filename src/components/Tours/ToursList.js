@@ -24,9 +24,22 @@ const ToursList = ({ title, tours, id }) => {
       setCardsPerRows(checkMediaQueries());
       setActiveSlide(0);
     };
-    mediaMdXl.addEventListener('change', listener);
 
-    return () => mediaMdXl.removeEventListener('change', listener);
+    const listenerAlt = () => {
+      if (mediaMdXl.matches) return undefined;
+      setCardsPerRows(checkMediaQueries());
+      setActiveSlide(0);
+
+      return undefined;
+    };
+
+    mediaMdXl.addEventListener('change', listener);
+    mediaMd.addEventListener('change', listenerAlt);
+
+    return () => {
+      mediaMdXl.removeEventListener('change', listener);
+      mediaMd.removeEventListener('change', listenerAlt);
+    };
   }, []);
 
   const renderCards = (cardsNumber) => {

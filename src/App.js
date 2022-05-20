@@ -3,7 +3,7 @@ import Layout from './components/MainLayout/Layout';
 import Homepage from './components/Homepage/Homepage';
 import AboutUs from './components/AboutUs/AboutUs';
 import Tours from './components/Tours/Tours';
-import TourDetails from './components/TourDetails/TourDerails';
+import TourDetails from './components/TourDetails/TourDetails';
 import './App.scss';
 
 const App = () => (
