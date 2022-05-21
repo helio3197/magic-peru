@@ -49,7 +49,7 @@ const TourDetails = () => {
 
   return (
     <Container fluid as="main" className="p-0 d-inline-block">
-      <Container as="section">
+      <Container as="section" className="tour-details">
         <Breadcrumb className="mt-1 mt-sm-3">
           <Breadcrumb.Item linkAs={toLink} href="/tours">
             Volver a lista de tours

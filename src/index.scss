@@ -36,6 +36,13 @@ $secondary: #d6e5ff;
     }
   }
 
+  .image-gallery-thumbnail-image {
+    aspect-ratio: 5 / 3;
+    object-fit: cover;
+  }
+}
+
+.tour-details {
   @media (min-width: 1200px) {
     .image-gallery-slide-wrapper.right {
       width: calc(100% - 200px);
@@ -48,10 +55,5 @@ $secondary: #d6e5ff;
     .image-gallery-thumbnail {
       width: 100%;
     }
-  }
-
-  .image-gallery-thumbnail-image {
-    aspect-ratio: 5 / 3;
-    object-fit: cover;
   }
 }
