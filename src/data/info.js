@@ -7,6 +7,15 @@ const pachacamacAdoratoryImages = importAll(require.context('../assets/lima/pach
 const peruvianPasoHorseImages = importAll(require.context('../assets/lima/caballo-de-paso', false, /\.(png|jpe?g|svg)$/));
 const gastronomicalTourImages = importAll(require.context('../assets/lima/city-tour-gastronomico', false, /\.(png|jpe?g|svg)$/));
 
+export {
+  limaCityTourImages,
+  limaFountainsImages,
+  dinnerShowImages,
+  pachacamacAdoratoryImages,
+  peruvianPasoHorseImages,
+  gastronomicalTourImages,
+};
+
 const data = {
   lima: {
     title: 'Lima',

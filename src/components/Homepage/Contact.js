@@ -8,7 +8,9 @@ import Button from 'react-bootstrap/Button';
 import contactImage from '../../assets/contact-placeholder.png';
 
 const Contact = ({ id }) => {
-  const [inputVal, setInputVal] = useState('');
+  const [inputVal, setInputVal] = useState({
+    name: '', email: '', phone: '', message: '',
+  });
 
   return (
     <Container as="section" className="my-5" id={id}>
@@ -17,33 +19,97 @@ const Contact = ({ id }) => {
           <h2 className="text-center">
             Comuniquese con nosotros...
           </h2>
-          <Form>
+          <Form
+            action="https://formspree.io/f/xeqnvpja"
+            method="POST"
+          >
             <Row>
-              <Form.Group
-                as={({
-                  children, className, xs, lg,
-                }) => (
-                  <Col className={className} xs={xs} lg={lg}>{children}</Col>
-                )}
-                controlId="placeholder"
-                xs="12"
-                lg="auto"
-                className="flex-grow-1 py-3"
-              >
-                <Form.Label visuallyHidden>
-                  placeholder
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Placeholder"
-                  required
-                  value={inputVal}
-                  onChange={(e) => setInputVal(e.target.value)}
-                />
-              </Form.Group>
-              <Col xs="auto" className="d-flex align-items-center">
-                <Button type="submit">
-                  Primary Action
+              <Col xs="12" xl="6">
+                <Form.Group
+                  controlId="name"
+                  className="flex-grow-1 py-2"
+                >
+                  <Form.Label visuallyHidden>
+                    Nombre
+                  </Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Nombre"
+                    name="name"
+                    required
+                    value={inputVal.name}
+                    onChange={(e) => setInputVal((state) => ({
+                      ...state,
+                      name: e.target.value,
+                    }))}
+                  />
+                </Form.Group>
+              </Col>
+              <Col xs="12" xl="6">
+                <Form.Group
+                  controlId="phone"
+                  className="flex-grow-1 py-2"
+                >
+                  <Form.Label visuallyHidden>
+                    Teléfono
+                  </Form.Label>
+                  <Form.Control
+                    type="phone"
+                    placeholder="Número de teléfono"
+                    name="phone"
+                    required
+                    value={inputVal.phone}
+                    onChange={(e) => setInputVal((state) => ({
+                      ...state,
+                      phone: e.target.value,
+                    }))}
+                  />
+                </Form.Group>
+              </Col>
+              <Col xs="12">
+                <Form.Group
+                  controlId="email"
+                  className="flex-grow-1 py-2"
+                >
+                  <Form.Label visuallyHidden>
+                    Email
+                  </Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="Email (Opcional)"
+                    name="email"
+                    value={inputVal.email}
+                    onChange={(e) => setInputVal((state) => ({
+                      ...state,
+                      email: e.target.value,
+                    }))}
+                  />
+                </Form.Group>
+              </Col>
+              <Col xs="12">
+                <Form.Group
+                  controlId="message"
+                  className="flex-grow-1 py-2"
+                >
+                  <Form.Label visuallyHidden>
+                    Mensaje
+                  </Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    placeholder="Mensaje"
+                    required
+                    name="message"
+                    value={inputVal.message}
+                    onChange={(e) => setInputVal((state) => ({
+                      ...state,
+                      message: e.target.value,
+                    }))}
+                  />
+                </Form.Group>
+              </Col>
+              <Col xs="12" className="d-flex align-items-center">
+                <Button type="submit" className="px-4">
+                  Enviar
                 </Button>
               </Col>
             </Row>
